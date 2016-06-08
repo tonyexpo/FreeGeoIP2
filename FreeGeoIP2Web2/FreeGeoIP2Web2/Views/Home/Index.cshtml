@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>freegeoip2 - free IP geocoding</title>
+    <meta name="description" content="freegeoip,geo ip,geo,ip,free,geocoding,host address,locating, whois">
+    <meta name="author" content="">
+</head>
+<body>
+    <div>
+        <h2>Freegeoip2</h2>
+        <h3>This is a free tool</h3>
+
+        <p>
+            <h4>Ask details about your address</h4>
+            JSON: @Html.ActionLink(Url.Action("Resolve"), "Resolve")<br />
+            XML: @Html.ActionLink(Url.Action("ResolveXml"), "ResolveXml")
+        </p>
+        <p>
+            <h4>Ask details about another address</h4>
+            JSON: @Html.ActionLink(Url.Action("Resolve", new { id = "123-123-123-123" }), "Resolve", new {id="123-123-123-123" })<br />
+            XML: @Html.ActionLink(Url.Action("ResolveXml", new { id = "123-123-123-123" }), "ResolveXml", new { id = "123-123-123-123" })
+        </p>
+
+        <p>
+            This product includes GeoLite2 data created by MaxMind, available from
+            <a href="http://www.maxmind.com">http://www.maxmind.com</a>.
+        </p>
+
+        <p>
+            <strong>No usage limit exists</strong>
+        </p>
+    </div>
+</body>
+</html>
